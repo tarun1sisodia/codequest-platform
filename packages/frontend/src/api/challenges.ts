@@ -3,12 +3,12 @@ import { Challenge, SubmissionResult, ConceptProgress, Badge } from "../types";
 
 export const getChallenges = async (): Promise<Challenge[]> => {
   const response = await api.get("/api/challenges");
-  return response.data;
+  return response.data.challenges || response.data;
 };
 
 export const getChallenge = async (identifier: string): Promise<Challenge> => {
   const response = await api.get(`/api/challenges/${identifier}`);
-  return response.data;
+  return response.data.challenge || response.data;
 };
 
 export const submitSolution = async (
@@ -60,7 +60,7 @@ export const getAllChallengesByConceptTag = async (
   try {
     // Get all challenges first
     const response = await api.get("/api/challenges");
-    const allChallenges = response.data;
+    const allChallenges = response.data.challenges || response.data;
 
     // Filter by concept tag on the client side
     return allChallenges.filter(

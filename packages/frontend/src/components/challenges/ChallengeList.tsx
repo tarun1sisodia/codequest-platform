@@ -33,7 +33,7 @@ const ChallengeList: React.FC = () => {
         const uniqueTags = [...new Set(allTags)];
         setConceptTags(uniqueTags);
       } catch (err) {
-        console.error(err);
+        console.error("Error fetching challenges:", err);
         setError("Failed to fetch challenges");
       } finally {
         setLoading(false);

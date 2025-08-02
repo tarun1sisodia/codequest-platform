@@ -118,11 +118,13 @@ const ChallengeDetail: React.FC = () => {
         code,
         challenge.language
       );
-      setResults(result.results);
+      // Extract the actual results array from the nested structure
+      const actualResults = result.results?.results || result.results || [];
+      const resultsArray = Array.isArray(actualResults) ? actualResults : [];
+      setResults(resultsArray);
 
       // Check if all tests passed
-      const allPassed =
-        Array.isArray(result.results) && result.results.every((r) => r.passed);
+      const allPassed = resultsArray.length > 0 && resultsArray.every((r) => r.passed);
 
       if (allPassed) {
         setNextEnabled(true);
@@ -619,7 +621,7 @@ const ChallengeDetail: React.FC = () => {
             )}
 
             {/* Test Results */}
-            {results && (
+            {results && Array.isArray(results) && results.length > 0 && (
               <div
                 className={`mt-6 transition-all duration-500 ${
                   results ? "opacity-100" : "opacity-0"
@@ -752,8 +754,8 @@ const ChallengeDetail: React.FC = () => {
                     <div className="p-3 bg-gray-800 rounded-lg border border-gray-700">
                       <div className="text-sm text-gray-400">Tests Passed</div>
                       <div className="text-xl font-bold text-green-400">
-                        {results.filter((r) => r.passed).length}/
-                        {results.length}
+                        {Array.isArray(results) ? results.filter((r) => r.passed).length : 0}/
+                        {Array.isArray(results) ? results.length : 0}
                       </div>
                     </div>
                     <div className="p-3 bg-gray-800 rounded-lg border border-gray-700">
@@ -762,7 +764,7 @@ const ChallengeDetail: React.FC = () => {
                       </div>
                       <div className="text-xl font-bold text-blue-400">
                         {Math.round(
-                          results.reduce((acc, r) => acc + r.executionTime, 0)
+                          Array.isArray(results) ? results.reduce((acc, r) => acc + r.executionTime, 0) : 0
                         )}{" "}
                         ms
                       </div>
@@ -771,12 +773,12 @@ const ChallengeDetail: React.FC = () => {
                       <div className="text-sm text-gray-400">Status</div>
                       <div
                         className={`text-xl font-bold ${
-                          results.every((r) => r.passed)
+                          Array.isArray(results) && results.every((r) => r.passed)
                             ? "text-green-400"
                             : "text-red-400"
                         }`}
                       >
-                        {results.every((r) => r.passed) ? "COMPLETE" : "FAILED"}
+                        {Array.isArray(results) && results.every((r) => r.passed) ? "COMPLETE" : "FAILED"}
                       </div>
                     </div>
                   </div>
