@@ -40,7 +40,7 @@ jobs:
         run: npm run lint -w packages/frontend
         
       - name: Run TypeScript check
-        run: npx tsc -b packages/frontend --noEmit
+        run: npx tsc --noEmit -p packages/frontend
         
       - name: Run unit tests
         run: npm run test:unit -w packages/frontend
