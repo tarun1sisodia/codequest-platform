@@ -12,6 +12,16 @@ A platform for creating and solving coding challenges, built with TypeScript, Re
 - 🤖 In-Editor AI Assistant with progressive help
 - 🔐 GitHub OAuth authentication
 
+## Screenshots
+
+### Challenge Interface
+![CodeQuest Challenge Interface](screenshots/codequest-challenge.png)
+*Interactive coding environment with real-time testing and AI assistance*
+
+### User Dashboard
+![CodeQuest Dashboard](screenshots/codequest-dashboard.png)
+*Progress tracking dashboard with achievements and statistics*
+
 ## Getting Started
 
 ### Prerequisites
