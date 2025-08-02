@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#F15BB5" />
+  <circle cx="100" cy="100" r="80" fill="#D850A0" />
+  
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FF8AD8" stroke-width="4" />
+  
+  <!-- Object Symbol -->
+  <g transform="translate(40, 40)">
+    <!-- Object Braces -->
+    <path d="M20,0 C10,0 0,10 0,20 L0,100 C0,110 10,120 20,120" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M100,0 C110,0 120,10 120,20 L120,100 C120,110 110,120 100,120" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    
+    <!-- Key-Value Pairs -->
+    <line x1="30" y1="40" x2="50" y2="40" stroke="white" stroke-width="6" stroke-linecap="round" />
+    <circle cx="70" cy="40" r="8" fill="white" />
+    
+    <line x1="30" y1="70" x2="50" y2="70" stroke="white" stroke-width="6" stroke-linecap="round" />
+    <rect x="60" y="62" width="16" height="16" fill="white" rx="2" ry="2" />
+    
+    <line x1="30" y1="100" x2="50" y2="100" stroke="white" stroke-width="6" stroke-linecap="round" />
+    <path d="M60,100 L80,90 L80,110 Z" fill="white" />
+  </g>
+  
+  <!-- Small Stars -->
+  <circle cx="40" cy="30" r="3" fill="white" />
+  <circle cx="170" cy="170" r="4" fill="white" />
+  <circle cx="30" cy="160" r="2" fill="white" />
+  <circle cx="160" cy="40" r="3" fill="white" />
+</svg>

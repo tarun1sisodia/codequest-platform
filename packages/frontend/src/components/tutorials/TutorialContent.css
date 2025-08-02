@@ -1,0 +1,43 @@
+/* Custom styles for tutorial content */
+.tutorial-content {
+  color: #1f2937; /* text-gray-800 */
+}
+
+.tutorial-content p,
+.tutorial-content li,
+.tutorial-content ul,
+.tutorial-content ol,
+.tutorial-content blockquote,
+.tutorial-content h3,
+.tutorial-content h4,
+.tutorial-content h5,
+.tutorial-content h6 {
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Dark mode styles */
+.dark .tutorial-content {
+  color: #e5e7eb; /* text-gray-200 */
+}
+
+.dark .tutorial-content p,
+.dark .tutorial-content li,
+.dark .tutorial-content ul,
+.dark .tutorial-content ol,
+.dark .tutorial-content blockquote,
+.dark .tutorial-content h3,
+.dark .tutorial-content h4,
+.dark .tutorial-content h5,
+.dark .tutorial-content h6 {
+  color: #e5e7eb; /* text-gray-200 */
+}
+
+/* Highlighted backgrounds need dark text */
+.tutorial-content .bg-blue-100,
+.tutorial-content .bg-green-100,
+.tutorial-content .bg-yellow-100,
+.tutorial-content .bg-red-100,
+.tutorial-content .bg-purple-100,
+.tutorial-content .bg-gray-100 {
+  color: #1f2937; /* text-gray-800 */
+}

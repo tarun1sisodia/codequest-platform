@@ -1,0 +1,13 @@
+FROM node:18-alpine
+
+# Install TypeScript and ts-node globally
+RUN npm install -g typescript ts-node @types/node
+
+# Create working directory
+WORKDIR /code
+
+# Add TypeScript configuration
+COPY tsconfig.json /code/tsconfig.json
+
+# Keep container running (will be overridden by actual command)
+CMD ["node"]

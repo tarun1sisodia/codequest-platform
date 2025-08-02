@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#FF5E5B" />
+  <circle cx="100" cy="100" r="80" fill="#E04E4C" />
+  
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FF8C8A" stroke-width="4" />
+  
+  <!-- IF-ELSE Symbol -->
+  <g transform="translate(50, 60)">
+    <!-- If Condition Symbols -->
+    <path d="M20,0 L40,0 L60,40 L40,80 L20,80 L0,40 Z" fill="none" stroke="white" stroke-width="8" stroke-linejoin="round" />
+    
+    <!-- TRUE/FALSE paths -->
+    <path d="M80,20 L100,20" stroke="white" stroke-width="8" stroke-linecap="round" />
+    <path d="M80,60 L100,60" stroke="white" stroke-width="8" stroke-linecap="round" />
+    
+    <!-- TRUE/FALSE endpoints -->
+    <circle cx="110" cy="20" r="10" fill="white" />
+    <circle cx="110" cy="60" r="10" fill="white" />
+  </g>
+  
+  <!-- Small Stars -->
+  <circle cx="30" cy="45" r="3" fill="white" />
+  <circle cx="170" cy="150" r="4" fill="white" />
+  <circle cx="40" cy="170" r="2" fill="white" />
+  <circle cx="160" cy="40" r="3" fill="white" />
+</svg>

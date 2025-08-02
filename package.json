@@ -1,0 +1,49 @@
+{
+	"name": "code-challenge-platform",
+	"version": "0.0.1",
+	"description": "An open-source platform for creating and solving coding challenges",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"dev": "npm run dev:backend & npm run dev:frontend",
+		"dev:backend": "npm run dev -w packages/backend",
+		"dev:frontend": "npm run dev -w packages/frontend",
+		"build": "npm run build --workspaces",
+		"test": "npm run test --workspaces",
+		"lint": "npm run lint --workspaces",
+		"clean": "npm run clean --workspaces",
+		"start": "npm run start --workspaces",
+		"build:backend": "npm run build -w packages/backend",
+		"build:frontend": "npm run build -w packages/frontend",
+		"start:backend": "npm run start -w packages/backend",
+		"start:prod": "npm run start:backend"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/crisecheverria/code-challenge-platform.git"
+	},
+	"keywords": [
+		"coding",
+		"challenges",
+		"education",
+		"learning",
+		"typescript",
+		"react"
+	],
+	"author": "Cristian Echeverria",
+	"license": "Apache 2.0",
+	"bugs": {
+		"url": "git+https://github.com/crisecheverria/code-challenge-platform.git"
+	},
+	"homepage": "https://github.com/crisecheverria/code-challenge-platform#readme",
+	"devDependencies": {
+		"@types/node": "^22.15.21",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"eslint": "^8.0.0",
+		"prettier": "^2.0.0",
+		"ts-node": "^10.9.2",
+		"typescript": "^4.9.5"
+	}
+}

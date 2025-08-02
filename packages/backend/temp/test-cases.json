@@ -1,0 +1,7 @@
+[
+  {
+    "input": [],
+    "expected": "int: 42, float: 3.14, bool: true, string: hello",
+    "description": "should demonstrate basic Go types"
+  }
+]

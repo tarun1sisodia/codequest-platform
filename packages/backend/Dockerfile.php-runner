@@ -1,0 +1,14 @@
+FROM php:8.2-cli
+
+# Install additional PHP extensions if needed
+# RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+# Create working directory
+WORKDIR /code
+
+# Set up permissions
+RUN mkdir -p /code/temp && \
+    chmod 777 /code/temp
+
+# Default command
+CMD ["php"]

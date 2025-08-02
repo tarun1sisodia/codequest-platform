@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#06D6A0" />
+  <circle cx="100" cy="100" r="80" fill="#05BF8E" />
+  
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#64F4C9" stroke-width="4" />
+  
+  <!-- Function Symbol -->
+  <g transform="translate(45, 50)">
+    <!-- Function Keyword -->
+    <text x="0" y="25" font-family="monospace" font-size="24" font-weight="bold" fill="white">function</text>
+    
+    <!-- Function Name and Parentheses -->
+    <text x="20" y="55" font-family="monospace" font-size="24" font-weight="bold" fill="white">fn( )</text>
+    
+    <!-- Curly Braces -->
+    <text x="40" y="85" font-family="monospace" font-size="40" font-weight="bold" fill="white">{ }</text>
+  </g>
+  
+  <!-- Small Stars -->
+  <circle cx="40" cy="40" r="3" fill="white" />
+  <circle cx="160" cy="160" r="4" fill="white" />
+  <circle cx="30" cy="150" r="2" fill="white" />
+  <circle cx="170" cy="50" r="3" fill="white" />
+</svg>
