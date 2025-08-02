@@ -49,7 +49,7 @@ const LeaderboardPage: React.FC = () => {
     }, 100);
 
     fetchLeaderboard();
-  }, [sortBy, currentPage]);
+  }, [sortBy, currentPage, fetchLeaderboard]);
 
   const fetchLeaderboard = async () => {
     try {

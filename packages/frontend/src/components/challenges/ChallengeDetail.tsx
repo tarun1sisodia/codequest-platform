@@ -93,7 +93,6 @@ const ChallengeDetail: React.FC = () => {
   }, [id]);
 
   useEffect(() => {
-    // Add this to the useEffect where you load user info:
     // Get username from localStorage
     const userJson = localStorage.getItem("user");
     if (userJson) {
@@ -104,7 +103,7 @@ const ChallengeDetail: React.FC = () => {
         console.error("Error parsing user data:", err);
       }
     }
-  });
+  }, []); // Add empty dependency array
 
   const handleSubmit = async () => {
     if (!challenge) return;

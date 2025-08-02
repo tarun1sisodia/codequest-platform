@@ -203,7 +203,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({
     if (isOpen) {
       fetchSuggestion();
     }
-  }, [helpLevel, isOpen]);
+  }, [helpLevel, isOpen, fetchSuggestion]);
 
   // Apply suggestion to code (when applicable)
   const applySuggestion = () => {
