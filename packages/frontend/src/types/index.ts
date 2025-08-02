@@ -6,7 +6,16 @@ export interface TestCase {
 
 export interface SubmissionResult {
   success: boolean;
-  results: ExecutionResult[];
+  results: {
+    success: boolean;
+    results: ExecutionResult[];
+    metrics: {
+      totalTime: number;
+      totalMemory: number;
+      passedTests: number;
+      totalTests: number;
+    };
+  };
   metrics: {
     totalTime: number;
     totalMemory: number;

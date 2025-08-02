@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import {
   getLeaderboard,
   LeaderboardUser,
@@ -42,16 +42,7 @@ const LeaderboardPage: React.FC = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  useEffect(() => {
-    // Animate in elements after a short delay
-    setTimeout(() => {
-      setAnimate(true);
-    }, 100);
-
-    fetchLeaderboard();
-  }, [sortBy, currentPage, fetchLeaderboard]);
-
-  const fetchLeaderboard = async () => {
+  const fetchLeaderboard = useCallback(async () => {
     try {
       setLoading(true);
       const data = await getLeaderboard({
@@ -70,7 +61,16 @@ const LeaderboardPage: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [sortBy, currentPage]);
+
+  useEffect(() => {
+    // Animate in elements after a short delay
+    setTimeout(() => {
+      setAnimate(true);
+    }, 100);
+
+    fetchLeaderboard();
+  }, [fetchLeaderboard]);
 
   const handleSortChange = (newSort: SortOption) => {
     setSortBy(newSort);
