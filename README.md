@@ -58,32 +58,7 @@ docker run --name mongodb \
   -d mongo
 ```
 
-Create a dedicated user for your application:
-
-```bash
-# Connect to MongoDB container
-docker exec -it mongodb bash
-
-# Access MongoDB with admin user
-mongosh admin -u admin -p password
-
-# Create a new database and user for your application
-use code-challenges
-db.createUser({
-  user: "app_user",
-  pwd: "app_password",
-  roles: [
-    { role: "readWrite", db: "code-challenges" }
-  ]
-})
-
-# Verify the user was created
-db.getUsers()
-
-# Exit mongosh and container
-exit
-exit
-```
+The MongoDB container is now ready to use with the admin user. The .env.example files are already configured to work with this setup using `admin:password` credentials.
 
 4. Update Your Environment Variables
 
@@ -109,14 +84,14 @@ To enable user authentication, you'll need to set up GitHub OAuth:
 
 **Backend (.env)**:
 ```
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
+GITHUB_CLIENT_ID=your-client-id
+GITHUB_CLIENT_SECRET=your-client-secret
 GITHUB_CALLBACK_URL=http://localhost:3001/api/auth/github/callback
 ```
 
 **Frontend (.env)**:
 ```
-VITE_GITHUB_CLIENT_ID=your_github_client_id
+VITE_GITHUB_CLIENT_ID=your-github-client-id
 VITE_GITHUB_CALLBACK_URL=http://localhost:3001/api/auth/github/callback
 ```
 
@@ -198,7 +173,7 @@ You can use MongoDB Compass (a GUI for MongoDB) to visualize and interact with y
 3. Connect to your local MongoDB instance with the connection string:
 
 ```
-mongodb://app_user:app_password@localhost:27017/code-challenges
+mongodb://admin:password@localhost:27017/code-challenges?authSource=admin
 ```
 
 4. Once connected, you can browse collections like `challenges`, `concepts`, `users`, and more
