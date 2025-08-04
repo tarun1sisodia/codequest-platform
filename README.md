@@ -12,6 +12,16 @@ A platform for creating and solving coding challenges, built with TypeScript, Re
 - 🤖 In-Editor AI Assistant with progressive help
 - 🔐 GitHub OAuth authentication
 
+## Supported Programming Languages
+
+Currently supported:
+- **TypeScrip/JavaScriptt** - Full support with comprehensive challenges
+- **PHP** - Challenges in development  
+- **Go** - Challenges in development
+
+Coming soon:
+- **Python** - Challenges in development
+
 ## Screenshots
 
 ### Challenge Interface
