@@ -111,6 +111,7 @@ To enable user authentication, you'll need to set up GitHub OAuth:
 ```
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
+GITHUB_CALLBACK_URL=http://localhost:3001/auth/github/callback
 ```
 
 **Frontend (.env)**:
