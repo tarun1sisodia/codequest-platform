@@ -102,9 +102,28 @@ export const AuthCallback = () => {
   useEffect(() => {
     const handleAuth = async () => {
       try {
-        const code = new URLSearchParams(window.location.search).get("code");
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get("code");
+        const token = urlParams.get("token");
+
+        // Handle direct token from backend redirect (from /auth/success)
+        if (token) {
+          setStatus("Processing authentication...");
+          localStorage.setItem("token", token);
+          
+          // Check for return URL
+          const returnTo = localStorage.getItem("returnTo") || "/dashboard";
+          localStorage.removeItem("returnTo"); // Clean up
+          localStorage.removeItem("redirectAfterLogin"); // Clean up
+
+          // Navigate to return URL or dashboard
+          navigate(returnTo);
+          return;
+        }
+
+        // Handle OAuth code exchange (from /auth/github/callback)
         if (!code) {
-          throw new Error("No authorization code received");
+          throw new Error("No authorization code or token received");
         }
 
         setStatus("Exchanging code for token...");

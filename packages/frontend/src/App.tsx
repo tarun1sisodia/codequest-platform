@@ -50,6 +50,7 @@ function App() {
         {/* Public authentication routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/auth/github/callback" element={<AuthCallback />} />
+        <Route path="/auth/success" element={<AuthCallback />} />
 
         {/* Main layout with both public and protected routes */}
         <Route path="/" element={<Layout />}>

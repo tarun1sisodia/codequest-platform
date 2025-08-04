@@ -97,7 +97,7 @@ export const config: AppConfig = {
     clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
     callbackUrl:
       process.env.GITHUB_CALLBACK_URL ||
-      "http://localhost:5173/auth/github/callback",
+      "http://localhost:3001/api/auth/github/callback",
   },
   jwt: {
     secret: (process.env.JWT_SECRET || "your-secret-key") as Secret,
