@@ -34,8 +34,8 @@ A platform for creating and solving coding challenges, built with TypeScript, Re
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/crisecheverria/code-challenge-platform.git
-cd code-challenge-platform
+git clone https://github.com/crisecheverria/codequest-platform.git
+cd codequest-platform
 ```
 
 2. Install dependencies:
