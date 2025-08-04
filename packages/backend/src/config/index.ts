@@ -89,7 +89,7 @@ export const config: AppConfig = {
     tempDir: process.env.RUNNER_TEMP_DIR || path.join(process.cwd(), "temp"),
   },
   executor: {
-    useNativeGo: process.env.USE_NATIVE_GO_EXECUTOR === "true" || process.env.NODE_ENV === "development",
+    useNativeGo: process.env.USE_NATIVE_GO_EXECUTOR === "true",
     nativeGoTimeout: parseInt(process.env.NATIVE_GO_TIMEOUT || "45000", 10), // 45 seconds default for production
   },
   github: {

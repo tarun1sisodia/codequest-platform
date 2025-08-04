@@ -28,6 +28,7 @@ A platform for creating and solving coding challenges, built with TypeScript, Re
 
 - Node.js 18+
 - Docker
+- Go (optional - only required if using native Go execution mode)
 
 ### Installation
 
@@ -131,6 +132,26 @@ USE_EXTERNAL_AI_API=true
 ```
 
 2. Restart the backend server
+
+## Code Execution Modes
+
+The platform supports multiple code execution modes:
+
+### Docker Execution (Default)
+All languages (TypeScript, Go, PHP) are executed in secure Docker containers. This is the recommended mode for production.
+
+### Native Go Execution (Optional)
+For development environments, you can enable native Go execution for faster compile times:
+
+1. Ensure Go is installed locally (`go version` should work)
+2. Add to your `packages/backend/.env`:
+```
+USE_NATIVE_GO_EXECUTOR=true
+NATIVE_GO_TIMEOUT=45000
+```
+3. Restart the backend server
+
+**Note**: Native execution is only available for Go challenges and requires Go to be installed on the host system.
 
 ## Seeding the Database
 
