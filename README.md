@@ -103,7 +103,7 @@ To enable user authentication, you'll need to set up GitHub OAuth:
 2. Create a new OAuth App with:
    - Application name: Code Challenge Platform
    - Homepage URL: `http://localhost:5173`
-   - Authorization callback URL: `http://localhost:3001/auth/github/callback`
+   - Authorization callback URL: `http://localhost:3001/api/auth/github/callback`
 3. Copy the Client ID and Client Secret
 4. Add them to your environment files:
 
