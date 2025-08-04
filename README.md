@@ -15,7 +15,7 @@ A platform for creating and solving coding challenges, built with TypeScript, Re
 ## Supported Programming Languages
 
 Currently supported:
-- **TypeScrip/JavaScriptt**
+- **TypeScript/JavaScript**
 - **PHP**
 - **Go**
 
