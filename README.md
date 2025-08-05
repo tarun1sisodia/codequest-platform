@@ -1,6 +1,6 @@
 # Code Challenge Platform
 
-A platform for creating and solving coding challenges, built with TypeScript, React, and Node.js.
+A platform for creating and solving coding challenges, built with TypeScript, React, and Node.js. Feel free to contribute and help us grow the collection of challenges and concepts!
 
 ## Features
 
@@ -31,6 +31,10 @@ Coming soon:
 ### User Dashboard
 ![CodeQuest Dashboard](assets/codequest-dashboard.png)
 *Progress tracking dashboard with achievements and statistics*
+
+## Coquest CLI
+
+If you want to solve challenges from the command line, you can use the [Coquest CLI](https://github.com/crisecheverria/codequest). It allows you to interact with almost the same list of challenges directly from your terminal. And you can use your own code editor to solve them.
 
 ## Getting Started
 
