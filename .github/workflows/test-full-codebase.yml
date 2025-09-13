@@ -139,6 +139,15 @@ jobs:
           DOCKER_TIMEOUT: 15000
           TEST_VERBOSE: false
 
+      - name: Comment coverage on PR
+        if: github.event_name == 'pull_request'
+        uses: romeovs/lcov-reporter-action@v0.3.1
+        with:
+          lcov-file: ./packages/backend/coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          title: Backend Test Coverage Report
+        continue-on-error: true
+          
       - name: Upload backend coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
@@ -193,6 +202,15 @@ jobs:
         env:
           NODE_ENV: test
 
+      - name: Comment coverage on PR
+        if: github.event_name == 'pull_request'
+        uses: romeovs/lcov-reporter-action@v0.3.1
+        with:
+          lcov-file: ./packages/frontend/coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          title: Frontend Test Coverage Report
+        continue-on-error: true
+          
       - name: Upload frontend coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
