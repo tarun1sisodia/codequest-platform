@@ -2,9 +2,15 @@ name: Full Codebase Tests
 
 on:
   push:
-    branches: [main, develop, chore/test-verification]
-  pull_request:
     branches: [main, develop]
+    paths: 
+      - 'packages/**'
+      - '.github/workflows/test-full-codebase.yml'
+  pull_request:
+    branches: [main]
+    paths: 
+      - 'packages/**'
+      - '.github/workflows/test-full-codebase.yml'
   workflow_dispatch:  # Allow manual triggering
 
 jobs:

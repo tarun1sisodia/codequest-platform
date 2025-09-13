@@ -48,6 +48,7 @@ repomix-output.txt
 # Ignore Cursor IDE files
 .cursor/
 AGENT.md
+WARP.md
 .clinerules/byterover-rules.md
 .kilocode/rules/byterover-rules.md
 .roo/rules/byterover-rules.md
