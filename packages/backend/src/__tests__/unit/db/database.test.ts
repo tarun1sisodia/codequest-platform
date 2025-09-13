@@ -13,8 +13,8 @@ describe("Database Connection", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     // Reset console methods
-    jest.spyOn(console, "log").mockImplementation(() => {});
-    jest.spyOn(console, "error").mockImplementation(() => {});
+    jest.spyOn(console, "log").mockImplementation(() => { /* mock implementation */ });
+    jest.spyOn(console, "error").mockImplementation(() => { /* mock implementation */ });
   });
 
   afterEach(() => {

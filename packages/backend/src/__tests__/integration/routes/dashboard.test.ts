@@ -9,13 +9,12 @@ import { config } from "../../../config";
 describe("Dashboard API Integration Tests", () => {
   let testUser: any;
   let authToken: string;
-  let testChallenge: any;
 
   beforeEach(async () => {
     await clearDatabase();
 
     // Create test challenge
-    testChallenge = await ChallengeModel.create({
+    await ChallengeModel.create({
       title: "Test Challenge",
       slug: "test-challenge",
       description: "Test challenge for dashboard",
